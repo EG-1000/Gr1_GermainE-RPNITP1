@@ -70,7 +70,7 @@ Observer le fichier [style.css](style.css) pour comprendre l'utilisation des @la
 
 ## 5. ARIA
 
-| Balise     | Attribut ARIA   | Valeur de l'attribut ARIA      | Bref commentaire explicatif au besoin                                                                                             |
+| Balise     | Attribut ARIA   | Valeur de l'attribut ARIA      | Bref commentaire explicatif au besoin\_\_                                                                                         |
 | :--------- | :-------------- | :----------------------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
 | `<nav>`    | `aria-label`    | `Navigation principale`        | Permet aux lecteurs d'écran de distinguer ce menu s'il y a d'autres zones de navigation dans la page.                             |
 | `<button>` | `aria-expanded` | `false` (ou `true`)            | Indique dynamiquement aux utilisateurs de technologies d'assistance si le menu déroulant est actuellement fermé ou ouvert.        |
