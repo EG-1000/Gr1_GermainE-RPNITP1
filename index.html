@@ -3,7 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Emile Germain" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="nav-menu" aria-label="Navigation principale">
+        <button
+          class="nav-menu__toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu-list"
+          aria-label="Ouvrir le menu de navigation"
+        >
+          <!-- L'icône doit être positionnée en premier pour le sélecteur CSS adjacent (+) -->
+          <span class="nav-menu__hamburger-icon" aria-hidden="true"></span>
+          <span class="nav-menu__libelle">Menu</span>
+        </button>
+        <ul id="nav-menu-list" class="nav-menu__list">
+          <li class="nav-menu__item">
+            <a href="#" class="nav-menu__link">FOULÉE</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="#" class="nav-menu__link">HOMME</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="#" class="nav-menu__link">FEMMES</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="#" class="nav-menu__link">ENFANTS</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="#" class="nav-menu__link">SPORT</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="#" class="nav-menu__link">PERSONNALISER</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="#" class="nav-menu__link">FOULÉE+</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="introduction">
+        <h1>CHAUSSURE</h1>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 FOULÉE. Tous droits réservés.</p>
+    </footer>
+  </body>
 </html>

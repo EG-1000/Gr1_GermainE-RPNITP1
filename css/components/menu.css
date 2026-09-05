@@ -3,10 +3,10 @@
 @layer components {
   /* 1. ARCHITECTURE DESKTOP */
   .nav-menu {
-    --nav-bg: #ffffff;
-    --nav-text: #020263;
-    --nav-accent: #0066cc;
-    --nav-focus-ring: #ffbf00;
+    --nav-bg: #000000;
+    --nav-text: #fff;
+    --nav-accent: #e7e3e7;
+    --nav-focus-ring: #4c4d5b;
 
     display: flex;
     justify-content: space-between;
@@ -22,7 +22,24 @@
       margin: 0;
       padding: 0;
     }
-
+    .nav-menu__item:first-child {
+      /* company name */
+      font-family: "Barlow Condensed";
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2.42px;
+    }
+    .nav-menu__item {
+      /* menu navigation */
+      font-family: Barlow;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.84px;
+    }
     .nav-menu__link {
       color: var(--nav-text);
       text-decoration: none;
