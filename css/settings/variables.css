@@ -2,4 +2,7 @@
 
 :root {
   --couleur-principale: rgb(62, 3, 118);
+  --footer: #2a2a2a;
+  --footer-text: #a5abb9;
+  --footer-link: #ffffff;
 }
