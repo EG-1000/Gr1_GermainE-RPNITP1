@@ -5,4 +5,5 @@
   --footer: #2a2a2a;
   --footer-text: #a5abb9;
   --footer-link: #ffffff;
+  --fil-dariane-lien: var(--footer-text);
 }

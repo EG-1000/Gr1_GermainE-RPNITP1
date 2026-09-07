@@ -48,12 +48,28 @@
     </header>
     <main>
       <div class="introduction">
-        <div class="fil-d'ariane">
-          <a href="#index.html" class="fil-d'ariane__lien">ACCUEIL</a>
-          <a href="#" class="fil-d'ariane__lien"> CATALOGUE </a>
+        <div class="fil-dariane">
+          <a href="#index.html" class="fil-dariane__lien">Accueil</a>
+          <a href="#" class="fil-dariane__lien">Catalogue</a>
         </div>
         <h1>CHAUSSURE</h1>
-        <p class="introduction__description"></p>
+        <p class="inventaire">12 produits</p>
+        <fieldset class="genre">
+          <button class="genre_tous">TOUS</button>
+          <button class="genre_homme">HOMME</button>
+          <button
+            class="genre_femmes"
+            aria-label="Voir les produits pour femmes"
+          >
+            FEMMES
+          </button>
+          <button
+            class="genre_enfants"
+            aria-label="Voir les produits pour enfants"
+          >
+            ENFANTS
+          </button>
+        </fieldset>
       </div>
     </main>
     <footer class="footer">
@@ -79,18 +95,36 @@
           <ul class="medias-sociaux__list">
             <li class="medias-sociaux__item">
               <a href="#" class="medias-sociaux__link screen-reader-text"
-                >Facebook</a
-              >
+                >Facebook
+                <img
+                  src="images/icones/facebook.png"
+                  alt="facebook"
+                  onmouseover="this.src = 'images/icones/facebook_white.png'"
+                  onmouseout="this.src = 'images/icones/facebook.png'"
+                  class="medias-sociaux__icon"
+              /></a>
             </li>
             <li class="medias-sociaux__item">
               <a href="#" class="medias-sociaux__link screen-reader-text"
-                >Twitter</a
-              >
+                >Twitter
+                <img
+                  src="images/icones/twitter.png"
+                  alt="twitter"
+                  onmouseover="this.src = 'images/icones/twitter_white.png'"
+                  onmouseout="this.src = 'images/icones/twitter.png'"
+                  class="medias-sociaux__icon"
+              /></a>
             </li>
             <li class="medias-sociaux__item">
               <a href="#" class="medias-sociaux__link screen-reader-text"
-                >Monde</a
-              >
+                >Monde
+                <img
+                  src="images/icones/globe.png"
+                  alt="globe"
+                  onmouseover="this.src = 'images/icones/globe_white.png'"
+                  onmouseout="this.src = 'images/icones/globe.png'"
+                  class="medias-sociaux__icon"
+              /></a>
             </li>
           </ul>
         </nav>
