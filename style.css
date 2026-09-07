@@ -26,3 +26,100 @@
 h1 {
   color: var(--couleur-principale);
 }
+
+/* footer */
+.footer {
+  background-color: var(--footer);
+  color: var(--footer-text);
+}
+.footer-haut {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 20px auto;
+}
+.footer-haut__logo {
+  font-family: "Barlow Condensed";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.42px;
+  color: white;
+}
+.footer-haut__list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px;
+  gap: 20px;
+}
+.medias-sociaux__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 20px auto;
+}
+.footer-haut__link {
+  text-decoration: none;
+}
+.medias-sociaux__link,
+.screen-reader-text {
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  font-size: 0;
+}
+.medias-sociaux__link:first-of-type {
+  background-image: url("../images/icones/facebook.png");
+  width: 1em;
+  height: auto;
+}
+.medias-sociaux__link:nth-of-type(2) {
+  background-image: url("../images/icones/twitter.png");
+  width: 1em;
+  height: auto;
+}
+.medias-sociaux__link:nth-of-type(3) {
+  background-image: url("../images/icones/globe.png");
+  width: 1em;
+  height: auto;
+}
+
+.medias-sociaux__link:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 1em;
+  z-index: 1;
+  height: auto;
+}
+
+.footer-bas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-bas__description {
+  align-self: center;
+  margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .footer-haut {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-haut__list {
+    flex-direction: row;
+  }
+  .medias-sociaux__list {
+    flex-direction: row;
+  }
+}
+.footer-haut__item {
+  list-style: none;
+}
+
+.footer-haut__link {
+  color: var(--footer-link);
+}
