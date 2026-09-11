@@ -28,6 +28,10 @@
   display: flex;
   background-color: black;
 }
+.barre-recherche__bouton {
+  border-style: none;
+  background-color: transparent;
+}
 /* main*/
 .fil-dariane {
   display: flex;
