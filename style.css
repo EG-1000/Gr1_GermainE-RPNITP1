@@ -23,7 +23,11 @@
 /* @import url("css/components/modale.css") layer(components); */
 
 /* Temporaire - Pour tester une variable définie dans les settings */
-
+/* header*/
+.header {
+  display: flex;
+  background-color: black;
+}
 /* main*/
 .fil-dariane {
   display: flex;

@@ -9,7 +9,7 @@
     <title>catague - FOULÉE</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav class="nav-menu" aria-label="Navigation principale">
         <button
           class="nav-menu__toggle"
@@ -45,6 +45,17 @@
           </li>
         </ul>
       </nav>
+      <form
+        action="pageCourante.php"
+        method="GET"
+        role="search"
+        class="barre-recherche"
+      >
+        <label for="recherche-principale" class="sr-only"> rechercher...
+        </label>
+        <input type="search" id="recherche-principale" name="q" placeholder="rechecher..." class="champ-recherche"> </form>
+        <button type="submit" class="barre-recherche__bouton" aria-label="Lancer la recherche">Rechercher </button>
+      </form>
     </header>
     <main>
       <div class="introduction">
