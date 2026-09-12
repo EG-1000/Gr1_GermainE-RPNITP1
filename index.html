@@ -1,173 +1,426 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Emile Germain" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="js/menu.js" defer></script>
-    <title>catague - FOULÉE</title>
-  </head>
-  <body>
-    <header class="header">
-      <nav class="nav-menu" aria-label="Navigation principale">
-        <button
-          class="nav-menu__toggle"
-          aria-expanded="false"
-          aria-controls="nav-menu-list"
-          aria-label="Ouvrir le menu de navigation"
-        >
-          <!-- L'icône doit être positionnée en premier pour le sélecteur CSS adjacent (+) -->
-          <span class="nav-menu__hamburger-icon" aria-hidden="true"></span>
-          <span class="nav-menu__libelle">Menu</span>
-        </button>
-        <ul id="nav-menu-list" class="nav-menu__list">
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">FOULÉE</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Emile Germain" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="js/menu.js" defer></script>
+  <title>catague - FOULÉE</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav-menu" aria-label="Navigation principale">
+      <button class="nav-menu__toggle" aria-expanded="false" aria-controls="nav-menu-list"
+        aria-label="Ouvrir le menu de navigation">
+        <!-- L'icône doit être positionnée en premier pour le sélecteur CSS adjacent (+) -->
+        <span class="nav-menu__hamburger-icon" aria-hidden="true"></span>
+        <span class="nav-menu__libelle">Menu</span>
+      </button>
+      <ul id="nav-menu-list" class="nav-menu__list">
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">FOULÉE</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">HOMME</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">FEMMES</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">ENFANTS</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">SPORT</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">PERSONNALISER</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">FOULÉE+</a>
+        </li>
+      </ul>
+    </nav>
+    <form action="pageCourante.php" method="GET" role="search" class="barre-recherche">
+      <label for="recherche-principale" class="sr-only"> rechercher...
+      </label>
+      <input type="search" id="recherche-principale" name="q" placeholder="rechecher..." class="champ-recherche">
+    </form>
+    <button type="submit" class="barre-recherche__bouton" aria-label="Lancer la recherche">Rechercher <img
+        src="images/icones/Loupe.png" alt="rechercher" aria-describedby="recherche" /></button>
+    </form>
+  </header>
+  <main>
+    <div class="introduction">
+      <div class="fil-dariane">
+        <a href="#index.html" class="fil-dariane__lien">Accueil</a>
+        <a href="#" class="fil-dariane__lien">Catalogue</a>
+      </div>
+      <h1>CHAUSSURE</h1>
+      <p class="inventaire">12 produits</p>
+
+      <button class="genre_bouton" selected>TOUS</button>
+      <button class="genre_bouton">HOMME</button>
+      <button class="genre_bouton" aria-label="Voir les produits pour femmes">
+        FEMMES
+      </button>
+      <button class="genre_bouton" aria-label="Voir les produits pour enfants">
+        ENFANTS
+      </button>
+    </div>
+    <fieldset>
+
+    </fieldset>
+    <div class="big_container">
+      <div class="filtre__container">
+        <details open>
+          <summary>sports</summary>
+          <div class="filtres">
+            <label>
+              <input type="checkbox" name="categorie" value="course" /> Course
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="basketball" /> Basketball
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="football" /> Football
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="training" /> Training
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="lifestyle" /> Lifestyle
+            </label>
+          </div>
+        </details>
+        <details open>
+          <summary>prix</summary>
+          <div class="filtres">
+            <label>
+              <input type="checkbox" name="categorie" value="0-80" /> - de 80$$
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="80-120" /> 80$ - 120$
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="120-180" /> 120$ - 180$
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="180+" /> + de 180$
+            </label>
+          </div>
+        </details>
+        <details open>
+          <summary>couleur</summary>
+          <div class="filtres">
+            <label>
+              <input type="checkbox" name="categorie" value="blanc" /> Blanc
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="noir" /> Noir
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="rouge" /> Rouge
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="bleu" /> Bleu
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="jaune" /> Jaune
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="gris" /> Gris
+            </label>
+          </div>
+        </details>
+        <details open>
+          <summary>taille</summary>
+          <div class="filtres">
+            <label>
+              <input type="checkbox" name="categorie" value="36" /> 36
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="37" /> 37
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="38" /> 38
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="39" /> 39
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="40" /> 40
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="41" /> 41
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="42" /> 42
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="43" /> 43
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="44" /> 44
+            </label>
+            <label>
+              <input type="checkbox" name="categorie" value="45" /> 45
+            </label>
+          </div>
+        </details>
+      </div>
+      <div class="grille">
+        <div class="boite-produit--1">
+          <box class="indicatif__nouveau">
+            <p class="nouveau">NOUVEAU</p>
+
+          </box>
+          <picture class="image_1_de_12">
+            <source srcset="images/optimisation/Men_AirForceFlynit_01_w271-demo.jpg" type="image/jpeg"
+              media="(min-width: 600px)" />
+            <source srcset="images/optimisation/Men_AirForceFlynit_01_w145-demo.jpg" type="image/jpeg"
+              media="(max-width: 599px)" />
+            <img src="images/optimisation/Men_AirForceFlynit_01_w271-demo.jpg" alt="Chaussure Homme Air Force Flynit" />
+          </picture>
+          <p class="genre-indicatif">HOMME</p>
+          <p class="nom-produit">Air Force Flynit</p>
+          <p class="indicatif-couleur"> 3 couleurs </p>
+          <p class="prix">$129,99</p>
+          <button aria-label="Ajouter au panier" class="Bouton__add">Ajouter au panier</button>
+        </div>
+        <div class="boite-produit--2">
+          <picture class="image_2_de_12">
+            <source srcset="images/optimisation/Wom_AirForceMidLeather_01_w271-demo.jpg" type="image/jpeg"
+              media="(min-width: 600px)" />
+            <source srcset="images/optimisation/Wom_AirForceMidLeather_01_w145-demo.jpg" type="image/jpeg"
+              media="(max-width: 599px)" />
+            <img src="images/optimisation/Wom_AirForceMidLeather_01_w271-demo.jpg"
+              alt="Chaussure Femme Air Force Mid Leather" />
+          </picture>
+          <p class="genre-indicatif">FEMME</p>
+          <p class="nom-produit">Air Force Mid Leather</p>
+          <p class="indicatif-couleur"> 4 couleurs </p>
+          <p class="prix">$109,99</p>
+          <button aria-label="Ajouter au panier" class="Bouton__add">Ajouter au panier</button>
+        </div>
+        <div class="boite-produit--3">
+          <picture class="image_3_de_12">
+            <source srcset="images/optimisation/Men_AirJordanRetroDecon_01_w271-demo.jpg" type="image/jpeg"
+              media="(min-width: 600px)" />
+            <source srcset="images/optimisation/Men_AirJordanRetroDecon_01_w145-demo.jpg" type="image/jpeg"
+              media="(max-width: 599px)" />
+            <img src="images/optimisation/Men_AirJordanRetroDecon_01_w271-demo.jpg"
+              alt="Chaussure Homme Air Jordan Retro Decon" />
+          </picture>
+          <p class="genre-indicatif">HOMME</p>
+          <p class="nom-produit">Air Jordan Retro Decon</p>
+          <p class="indicatif-couleur"> 5 couleurs </p>
+          <p class="prix">$189,99</p>
+          <button aria-label="Ajouter au panier" class="Bouton__add">Ajouter au panier</button>
+        </div>
+        <div class="boite-produit--4">
+          <picture class="image_4_de_12">
+            <source srcset="images/optimisation/Men_AirVortex01_w271-demo.jpg" type="image/jpeg"
+              media="(min-width: 600px)" />
+            <source srcset="images/optimisation/Men_AirVortex01_w145-demo.jpg" type="image/jpeg"
+              media="(max-width: 599px)" />
+            <img src="images/optimisation/Men_AirVortex01_w271-demo.jpg" alt="Chaussure Homme Air Vortex" />
+          </picture>
+          <p class="genre-indicatif">HOMME</p>
+          <p class="nom-produit">Air Vortex</p>
+          <p class="indicatif-couleur"> 3 couleurs </p>
+          <p class="prix">$99,99</p>
+          <button aria-label="Ajouter au panier" class="Bouton__add">Ajouter au panier</button>
+        </div>
+        <div class="boite-produit--5">
+          <picture class="image_5_de_12">
+            <source srcset="images/optimisation/Men_CourtBoroughMid_01_w271-demo.jpg" type="image/jpeg"
+              media="(min-width: 600px)" />
+            <source srcset="images/optimisation/Men_CourtBoroughMid_01_w145-demo.jpg" type="image/jpeg"
+              media="(max-width: 599px)" />
+            <img src="images/optimisation/Men_CourtBoroughMid_01_w271-demo.jpg"
+              alt="Chaussure Homme Court Borough Mid" />
+          </picture>
+          <p class="genre-indicatif">HOMME</p>
+          <p class="nom-produit">Court Borough Mid</p>
+          <p class="indicatif-couleur"> 4 couleurs </p>
+          <p class="prix">$79,99</p>
+          <button aria-label="Ajouter au panier" class="Bouton__add">Ajouter au panier</button>
+        </div>
+        <div class="boite-produit--6">
+          <box class="indicatif__nouveau">
+            <p class="nouveau">NOUVEAU</p>
+          </box>
+          <picture class="image_6_de_12">
+            <source srcset="images/optimisation/Wom_ClassicCortezNylonB_01_w271-demo.jpg" type="image/jpeg"
+              media="(min-width: 600px)" />
+            <source srcset="images/optimisation/Wom_ClassicCortezNylonB_01_w145-demo.jpg" type="image/jpeg"
+              media="(max-width: 599px)" />
+            <img src="images/optimisation/Wom_ClassicCortezNylonB_01_w271-demo.jpg"
+              alt="Chaussure Femme Classic Cortez Nylon B" />
+          </picture>
+          <p class="genre-indicatif">FEMME</p>
+          <p class="nom-produit">Classic Cortez Nylon B</p>
+          <p class="indicatif-couleur"> 4 couleurs </p>
+          <p class="prix">$89,99</p>
+          <button aria-label="Ajouter au panier" class="Bouton__add">Ajouter au panier</button>
+        </div>
+        <div class="boite-produit--7">
+          <box class="indicatif__nouveau">
+            <p class="nouveau">NOUVEAU</p>
+          </box>
+          <picture class="image_7_de_12">
+            <source srcset="images/optimisation/Men_AirMaxUltraMoire_01_w271-demo.jpg" type="image/jpeg"
+              media="(min-width: 600px)" />
+            <source srcset="images/optimisation/Men_AirMaxUltraMoire_01_w145-demo.jpg" type="image/jpeg"
+              media="(max-width: 599px)" />
+            <img src="images/optimisation/Men_AirMaxUltraMoire_01_w271-demo.jpg"
+              alt="Chaussure Homme Air Max Ultra Moire" />
+          </picture>
+          <p class="genre-indicatif">HOMME</p>
+          <p class="nom-produit">Air Max Ultra Moire</p>
+          <p class="indicatif-couleur"> 4 couleurs </p>
+          <p class="prix">$149,99</p>
+          <button aria-label="Ajouter au panier" class="Bouton__add">Ajouter au panier</button>
+        </div>
+        <div class="boite-produit--8">
+          <picture class="image_8_de_12">
+            <source srcset="images/optimisation/Wom_AirMaxLDZero_01_w271-demo.jpg" type="image/jpeg"
+              media="(min-width: 600px)" />
+            <source srcset="images/optimisation/Wom_AirMaxLDZero_01_w145-demo.jpg" type="image/jpeg"
+              media="(max-width: 599px)" />
+            <img src="images/optimisation/Wom_AirMaxLDZero_01_w271-demo.jpg" alt="Chaussure Femme Air Max LD Zero" />
+          </picture>
+          <p class="genre-indicatif">FEMME</p>
+          <p class="nom-produit">Air Max LD Zero</p>
+          <p class="indicatif-couleur"> 6 couleurs </p>
+          <p class="prix">$119,99</p>
+          <button aria-label="Ajouter au panier" class="Bouton__add">Ajouter au panier</button>
+        </div>
+        <div class="boite-produit--9">
+          <box class="indicatif__nouveau">
+            <p class="nouveau">NOUVEAU</p>
+          </box>
+          <picture class="image_9_de_12">
+            <source srcset="images/optimisation/Wom_BlazerLowLX_01_w271-demo.jpg" type="image/jpeg"
+              media="(min-width: 600px)" />
+            <source srcset="images/optimisation/Wom_BlazerLowLX_01_w145-demo.jpg" type="image/jpeg"
+              media="(max-width: 599px)" />
+            <img src="images/optimisation/Wom_BlazerLowLX_01_w271-demo.jpg" alt="Chaussure Femme Blazer Low LX" />
+          </picture>
+          <p class="genre-indicatif">FEMME</p>
+          <p class="nom-produit">Blazer Low LX</p>
+          <p class="indicatif-couleur"> 3 couleurs </p>
+          <p class="prix">$109,99</p>
+          <button aria-label="Ajouter au panier" class="Bouton__add">Ajouter au panier</button>
+        </div>
+        <div class="boite-produit--10">
+          <picture class="image_10_de_12">
+            <source srcset="images/optimisation/Men_CortezUltraMoire_01_w271-demo.jpg" type="image/jpeg"
+              media="(min-width: 600px)" />
+            <source srcset="images/optimisation/Men_CortezUltraMoire_01_w145-demo.jpg" type="image/jpeg"
+              media="(max-width: 599px)" />
+            <img src="images/optimisation/Men_CortezUltraMoire_01_w271-demo.jpg"
+              alt="Chaussure Homme Cortez Ultra Moire" />
+          </picture>
+          <p class="genre-indicatif">HOMME</p>
+          <p class="nom-produit">Cortez Ultra Moire</p>
+          <p class="indicatif-couleur"> 5 couleurs </p>
+          <p class="prix">$99,99</p>
+          <button aria-label="Ajouter au panier" class="Bouton__add">Ajouter au panier</button>
+        </div>
+        <div class="boite-produit--11">
+          <picture class="image_11_de_12">
+            <source srcset="images/optimisation/Wom_FlexSupremeTR5b_01_w271-demo.jpg" type="image/jpeg"
+              media="(min-width: 600px)" />
+            <source srcset="images/optimisation/Wom_FlexSupremeTR5b_01_w145-demo.jpg" type="image/jpeg"
+              media="(max-width: 599px)" />
+            <img src="images/optimisation/Wom_FlexSupremeTR5b_01_w271-demo.jpg"
+              alt="Chaussure Femme Flex Supreme TR 5b" />
+          </picture>
+          <p class="genre-indicatif">FEMME</p>
+          <p class="nom-produit">Flex Supreme TR 5b</p>
+          <p class="indicatif-couleur"> 3 couleurs </p>
+          <p class="prix">$89,99</p>
+          <button aria-label="Ajouter au panier" class="Bouton__add">Ajouter au panier</button>
+        </div>
+        <div class="boite-produit--12">
+          <box class="indicatif__nouveau">
+            <p class="nouveau">NOUVEAU</p>
+          </box>
+          <picture class="image_12_de_12">
+            <source srcset="images/optimisation/Wom_LunarChargeEssential_01_w271-demo.jpg" type="image/jpeg"
+              media="(min-width: 600px)" />
+            <source srcset="images/optimisation/Wom_LunarChargeEssential_01_w145-demo.jpg" type="image/jpeg"
+              media="(max-width: 599px)" />
+            <img src="images/optimisation/Wom_LunarChargeEssential_01_w271-demo.jpg"
+              alt="Chaussure Femme Lunar Charge Essential" />
+          </picture>
+          <p class="genre-indicatif">FEMME</p>
+          <p class="nom-produit">Lunar Charge Essential</p>
+          <p class="indicatif-couleur"> 4 couleurs </p>
+          <p class="prix">$119,99</p>
+          <button aria-label="Ajouter au panier" class="Bouton__add">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="footer">
+    <section class="footer-haut">
+      <p class="footer-haut__logo">FOULÉE</p>
+      <nav class="footer-haut__nav" aria-label="Navigation du pied de page">
+        <ul class="footer-haut__list">
+          <li class="footer-haut__item">
+            <a href="#" class="footer-haut__link">ACCUEIL</a>
           </li>
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">HOMME</a>
+          <li class="footer-haut__item">
+            <a href="#" class="footer-haut__link">À PROPOS</a>
           </li>
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">FEMMES</a>
+          <li class="footer-haut__item">
+            <a href="#" class="footer-haut__link">SUPPORT</a>
           </li>
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">ENFANTS</a>
-          </li>
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">SPORT</a>
-          </li>
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">PERSONNALISER</a>
-          </li>
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">FOULÉE+</a>
+          <li class="footer-haut__item">
+            <a href="#" class="footer-haut__link">CONTACT</a>
           </li>
         </ul>
       </nav>
-      <form
-        action="pageCourante.php"
-        method="GET"
-        role="search"
-        class="barre-recherche"
-      >
-        <label for="recherche-principale" class="sr-only"> rechercher...
-        </label>
-        <input type="search" id="recherche-principale" name="q" placeholder="rechecher..." class="champ-recherche"> </form>
-        <button type="submit" class="barre-recherche__bouton" aria-label="Lancer la recherche">Rechercher <img src="images/icones/Loupe.png" alt="rechercher" aria-describedby="recherche"/></button>
-      </form>
-    </header>
-    <main>
-      <div class="introduction">
-        <div class="fil-dariane">
-          <a href="#index.html" class="fil-dariane__lien">Accueil</a>
-          <a href="#" class="fil-dariane__lien">Catalogue</a>
-        </div>
-        <h1>CHAUSSURE</h1>
-        <p class="inventaire">12 produits</p>
-        <fieldset class="genre">
-          <button class="genre_tous">TOUS</button>
-          <button class="genre_homme">HOMME</button>
-          <button
-            class="genre_femmes"
-            aria-label="Voir les produits pour femmes"
-          >
-            FEMMES
-          </button>
-          <button
-            class="genre_enfants"
-            aria-label="Voir les produits pour enfants"
-          >
-            ENFANTS
-          </button>
-        </fieldset>
+      <nav class="medias-sociaux">
+        <ul class="medias-sociaux__list">
+          <li class="medias-sociaux__item">
+            <a href="#" class="medias-sociaux__link screen-reader-text">Facebook
+              <img src="images/icones/facebook.png" alt="facebook"
+                onmouseover="this.src = 'images/icones/facebook_white.png'"
+                onmouseout="this.src = 'images/icones/facebook.png'" class="medias-sociaux__icon" /></a>
+          </li>
+          <li class="medias-sociaux__item">
+            <a href="#" class="medias-sociaux__link screen-reader-text">Twitter
+              <img src="images/icones/twitter.png" alt="twitter"
+                onmouseover="this.src = 'images/icones/twitter_white.png'"
+                onmouseout="this.src = 'images/icones/twitter.png'" class="medias-sociaux__icon" /></a>
+          </li>
+          <li class="medias-sociaux__item">
+            <a href="#" class="medias-sociaux__link screen-reader-text">Monde
+              <img src="images/icones/globe.png" alt="globe" onmouseover="this.src = 'images/icones/globe_white.png'"
+                onmouseout="this.src = 'images/icones/globe.png'" class="medias-sociaux__icon" /></a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <section class="footer-bas">
+      <div class="footer-bas__copyright">
+        <p>&copy; 2017 FOULÉE.</p>
+        <p>tous droits réservés 2017.</p>
       </div>
-      <div class="boite_produit">
-        <box class="indicatif__nouveau">
-          <p class="nouveau">NOUVEAU</p>
-        </box>
-      </div>
-      <div class="boite_produit"></div>
-      <div class="boite_produit"></div>
-      <div class="boite_produit"></div>
-      <div class="boite_produit"></div>
-      <div class="boite_produit"> <box class="indicatif__nouveau">
-          <p class="nouveau">NOUVEAU</p></box></div>
-      <div class="boite_produit"></div>
-      <div class="boite_produit"></div>
-      <div class="boite_produit"></div>
-      <div class="boite_produit"></div>
-      <div class="boite_produit"></div>
-      <div class="boite_produit"></div>
-    </main>
-    <footer class="footer">
-      <section class="footer-haut">
-        <p class="footer-haut__logo">FOULÉE</p>
-        <nav class="footer-haut__nav" aria-label="Navigation du pied de page">
-          <ul class="footer-haut__list">
-            <li class="footer-haut__item">
-              <a href="#" class="footer-haut__link">ACCUEIL</a>
-            </li>
-            <li class="footer-haut__item">
-              <a href="#" class="footer-haut__link">À PROPOS</a>
-            </li>
-            <li class="footer-haut__item">
-              <a href="#" class="footer-haut__link">SUPPORT</a>
-            </li>
-            <li class="footer-haut__item">
-              <a href="#" class="footer-haut__link">CONTACT</a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="medias-sociaux">
-          <ul class="medias-sociaux__list">
-            <li class="medias-sociaux__item">
-              <a href="#" class="medias-sociaux__link screen-reader-text"
-                >Facebook
-                <img
-                  src="images/icones/facebook.png"
-                  alt="facebook"
-                  onmouseover="this.src = 'images/icones/facebook_white.png'"
-                  onmouseout="this.src = 'images/icones/facebook.png'"
-                  class="medias-sociaux__icon"
-              /></a>
-            </li>
-            <li class="medias-sociaux__item">
-              <a href="#" class="medias-sociaux__link screen-reader-text"
-                >Twitter
-                <img
-                  src="images/icones/twitter.png"
-                  alt="twitter"
-                  onmouseover="this.src = 'images/icones/twitter_white.png'"
-                  onmouseout="this.src = 'images/icones/twitter.png'"
-                  class="medias-sociaux__icon"
-              /></a>
-            </li>
-            <li class="medias-sociaux__item">
-              <a href="#" class="medias-sociaux__link screen-reader-text"
-                >Monde
-                <img
-                  src="images/icones/globe.png"
-                  alt="globe"
-                  onmouseover="this.src = 'images/icones/globe_white.png'"
-                  onmouseout="this.src = 'images/icones/globe.png'"
-                  class="medias-sociaux__icon"
-              /></a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-      <section class="footer-bas">
-        <div class="footer-bas__copyright">
-          <p>&copy; 2017 FOULÉE.</p>
-          <p>tous droits réservés 2017.</p>
-        </div>
-        <p class="footer-bas__description">
-          FOULÉE. est une boutique spécialisée dans la vente de chaussure de
-          sport et de lifestyle. Nous offrons une sélection soigneusement
-          choisie pour hommes, femmes et enfants.
-        </p>
-      </section>
-    </footer>
-  </body>
+      <p class="footer-bas__description">
+        FOULÉE. est une boutique spécialisée dans la vente de chaussure de
+        sport et de lifestyle. Nous offrons une sélection soigneusement
+        choisie pour hommes, femmes et enfants.
+      </p>
+    </section>
+  </footer>
+</body>
+
 </html>

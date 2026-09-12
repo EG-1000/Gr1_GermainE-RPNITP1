@@ -6,4 +6,6 @@
   --footer-text: #a5abb9;
   --footer-link: #ffffff;
   --fil-dariane-lien: var(--footer-text);
+  --indicatif-nouveau-background: #000000; /* Example color for the "NOUVEAU" indicator */
+  --genre-indicatif: #008fd1;
 }
