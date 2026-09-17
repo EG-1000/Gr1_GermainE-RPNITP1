@@ -23,6 +23,13 @@
 /* @import url("css/components/modale.css") layer(components); */
 
 /* Temporaire - Pour tester une variable définie dans les settings */
+/* !important nécessaire car .filtre__container (déclaré plus bas) impose display:flex avec la même spécificité */
+.is-hidden {
+  display: none !important;
+}
+.grille__2{
+  display:none;
+}
 /* header*/
 .header {
   display: flex;
@@ -32,7 +39,31 @@
   border-style: none;
   background-color: transparent;
 }
+.container-recherche {
+display: flex;
+
+align-items: flex-start;
+}
 /* main*/
+.btn__filtres {
+  border-style: none;
+  background-color: transparent;
+  display: flex;
+width: 174px;
+height: 19px;
+justify-content: center;
+align-items: center;
+gap: 6px;
+flex-shrink: 0;
+  
+}
+.mini-section {
+  border-top: 1px solid var(--fil-dariane-lien);
+  border-bottom: 1px solid var(--fil-dariane-lien);
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top:10px; 
+}
 .genre_bouton { 
 border:  1px solid #DDD;
 background: #FFF;
@@ -43,7 +74,7 @@ background: #FFF;
 background-color: black;
   color: white;
 }
-  .big_container{
+  .big_container{ 
     display:flex;
     align-items: stretch;
   justify-content: center;
@@ -285,7 +316,29 @@ details:not([open]) summary::after {
   gap: 5px;
 }
 
-
+.container-navigateur {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 20px;
+  gap: 5px; 
+}
+.navigateur__page{
+  border: solid 1px var(--fil-dariane-lien);
+  background-color: transparent ;
+  color: #7A7A7A;
+text-align: center;
+font-family: Barlow;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.84px;
+}
+.navigateur__page:hover, .navigateur__page:active{
+background-color: black;
+color:#FFF;
+}
 /* footer */
 .footer {
   background-color: var(--footer);

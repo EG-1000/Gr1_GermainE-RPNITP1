@@ -7,6 +7,7 @@
   <meta name="author" content="Emile Germain" />
   <link rel="stylesheet" href="style.css" />
   <script src="js/menu.js" defer></script>
+  <script src="js/interaction.js" defer></script>
   <title>catague - FOULÉE</title>
 </head>
 
@@ -24,13 +25,13 @@
           <a href="#" class="nav-menu__link">FOULÉE</a>
         </li>
         <li class="nav-menu__item">
-          <a href="#" class="nav-menu__link">HOMME</a>
+          <a href="#Homme" class="nav-menu__link">HOMME</a>
         </li>
         <li class="nav-menu__item">
-          <a href="#" class="nav-menu__link">FEMMES</a>
+          <a href="#Femme" class="nav-menu__link">FEMMES</a>
         </li>
         <li class="nav-menu__item">
-          <a href="#" class="nav-menu__link">ENFANTS</a>
+          <a href="#Enfant" class="nav-menu__link">ENFANTS</a>
         </li>
         <li class="nav-menu__item">
           <a href="#" class="nav-menu__link">SPORT</a>
@@ -46,10 +47,12 @@
     <form action="pageCourante.php" method="GET" role="search" class="barre-recherche">
       <label for="recherche-principale" class="sr-only"> rechercher...
       </label>
-      <input type="search" id="recherche-principale" name="q" placeholder="rechecher..." class="champ-recherche">
-    </form>
-    <button type="submit" class="barre-recherche__bouton" aria-label="Lancer la recherche">Rechercher <img
-        src="images/icones/Loupe.png" alt="rechercher" aria-describedby="recherche" /></button>
+      <div class="container-recherche">
+        <input type="search" id="recherche-principale" name="q" placeholder="rechecher..." class="champ-recherche">
+
+        <button type="submit" class="barre-recherche__bouton" aria-label="Lancer la recherche">Rechercher <img
+            src="images/icones/Loupe.png" alt="rechercher" aria-describedby="recherche" /></button>
+      </div>
     </form>
   </header>
   <main>
@@ -70,11 +73,13 @@
         ENFANTS
       </button>
     </div>
-    <fieldset>
-
+    <fieldset class="mini-section">
+      <button type="button" class="btn__filtres" id="btn-toggle-form" aria-controls="filter-form"
+        aria-expanded="true"><img src="images/icones/masquer_filtres.png" alt="masquer les filtres" /> masquer
+        les filtres</button>
     </fieldset>
     <div class="big_container">
-      <div class="filtre__container">
+      <form class="filtre__container" id="filter-form">
         <details open>
           <summary>sports</summary>
           <div class="filtres">
@@ -170,7 +175,7 @@
             </label>
           </div>
         </details>
-      </div>
+      </form>
       <div class="grille">
         <div class="boite-produit--1">
           <box class="indicatif__nouveau">
@@ -366,7 +371,16 @@
         </div>
       </div>
     </div>
-
+    <div class="grille__2"></div>
+    <div class="grille__3"></div>
+    <div class="container-navigateur">
+      <button type="button" class="navigateur__page" aria-label="Page précédente" id="pagePrecedente">
+        &lt; </button>
+      <button type="button" class="navigateur__page" aria-label="Page 1" id="page1">1</button>
+      <button type="button" class="navigateur__page" aria-label="Page 2" id="page2">2</button>
+      <button type="button" class="navigateur__page" aria-label="Page 3" id="page3">3</button>
+      <button type="button" class="navigateur__page" aria-label="Page suivante" id="pageSuivante">&gt;</button>
+    </div>
   </main>
   <footer class="footer">
     <section class="footer-haut">
