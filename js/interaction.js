@@ -21,25 +21,88 @@ toggleBtn.addEventListener("click", function () {
         filterForm.classList.remove("is-hidden");
     }
 });
-//fonction pour obtenir la page 2
+//fonction pour obtenir les pages
 var boutonpage1 = document.getElementById("page1");
 var boutonpage2 = document.getElementById("page2");
+var boutonpage3 = document.getElementById("page3");
 var grille1 = document.getElementsByClassName("grille");
 var grille2 = document.getElementsByClassName("grille__2");
 var grille3 = document.getElementsByClassName("grille__3");
+let arrgrilles = [grille1, grille2, grille3];
+var boutonpageSuivante = document.getElementById("pageSuivante");
+var boutonpagePrecedente = document.getElementById("pagePrecedente");
+let intcompteur = 0;
+let Arrboutons = [boutonpage1, boutonpage2, boutonpage3, boutonpageSuivante, boutonpagePrecedente]
+//evenement 
+boutonpageSuivante.addEventListener('click', incrementdegrille);
+boutonpagePrecedente.addEventListener('click', decrementdegrille);
+function incrementdegrille() {
+    intcompteur++;
+    if (intcompteur > 2) {
+        intcompteur = 0;
+    }
+    for (let i = 0; i < arrgrilles.length; i++) {
+        if (i === intcompteur) {
+            arrgrilles[i][0].style.display = "grid";
+        } else {
+            arrgrilles[i][0].style.display = "none";
+        }
+    }
+
+    indicateurdepage(intcompteur);
+}
+function decrementdegrille() {
+    intcompteur--;
+    if (intcompteur < 0) {
+        intcompteur = arrgrilles.length - 1;
+    }
+    for (let i = 0; i < arrgrilles.length; i++) {
+        if (i === intcompteur) {
+            arrgrilles[i][0].style.display = "grid";
+        } else {
+            arrgrilles[i][0].style.display = "none";
+        }
+    }
+    indicateurdepage(intcompteur);
+}
 boutonpage1.addEventListener('click', () => {
+    intcompteur = 0;
     grille2[0].style.display = "none";
     grille1[0].style.display = "grid";
     grille3[0].style.display = "none";
+
+    indicateurdepage(intcompteur);
 });
 boutonpage2.addEventListener('click', () => {
+    intcompteur = 1;
     grille2[0].style.display = "grid";
     grille1[0].style.display = "none";
     grille3[0].style.display = "none";
+
+    indicateurdepage(intcompteur);
 });
-var boutonpage3 = document.getElementById("page3");
 boutonpage3.addEventListener('click', () => {
+    intcompteur = 2;
+    indicateurdepage(intcompteur);
     grille3[0].style.display = "grid";
     grille1[0].style.display = "none";
     grille2[0].style.display = "none";
+
+
 });
+
+
+
+function indicateurdepage(index) {
+    for (let i = 0; i < arrgrilles.length; i++) {
+        var bouton = document.getElementById("page" + (i + 1));
+
+        if (i == index) {
+            bouton.classList.add("is-active");
+        } else {
+            bouton.classList.remove("is-active");
+        }
+    }
+
+}
+indicateurdepage(intcompteur);

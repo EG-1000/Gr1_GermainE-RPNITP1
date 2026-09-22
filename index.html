@@ -45,14 +45,12 @@
       </ul>
     </nav>
     <form action="pageCourante.php" method="GET" role="search" class="barre-recherche">
-      <label for="recherche-principale" class="sr-only"> rechercher...
+      <label for="recherche-principale" class="sr-only focusable"> rechercher...
       </label>
-      <div class="container-recherche">
-        <input type="search" id="recherche-principale" name="q" placeholder="rechecher..." class="champ-recherche">
-
-        <button type="submit" class="barre-recherche__bouton" aria-label="Lancer la recherche">Rechercher <img
-            src="images/icones/Loupe.png" alt="rechercher" aria-describedby="recherche" /></button>
-      </div>
+      <input type="search" id="recherche-principale" name="q" placeholder="rechecher..." class="champ-recherche">
+      <button type="submit" class="barre-recherche__bouton" aria-label="Lancer la recherche"><span
+          class="sr-only">Rechercher</span><img src="images/icones/Loupe.png" class="barre-recherche__icone" alt="loupe"
+          aria-hidden="true" /></button>
     </form>
   </header>
   <main>
@@ -63,21 +61,31 @@
       </div>
       <h1>CHAUSSURE</h1>
       <p class="inventaire">12 produits</p>
-
-      <button class="genre_bouton" selected>TOUS</button>
-      <button class="genre_bouton">HOMME</button>
-      <button class="genre_bouton" aria-label="Voir les produits pour femmes">
-        FEMMES
-      </button>
-      <button class="genre_bouton" aria-label="Voir les produits pour enfants">
-        ENFANTS
-      </button>
+      <div class="genre_boutons">
+        <button class="genre_bouton" selected>TOUS</button>
+        <button class="genre_bouton">HOMME</button>
+        <button class="genre_bouton" aria-label="Voir les produits pour femmes">
+          FEMMES
+        </button>
+        <button class="genre_bouton" aria-label="Voir les produits pour enfants">
+          ENFANTS
+        </button>
+      </div>
     </div>
-    <fieldset class="mini-section">
+    <form class="mini-section">
+
       <button type="button" class="btn__filtres" id="btn-toggle-form" aria-controls="filter-form"
         aria-expanded="true"><img src="images/icones/masquer_filtres.png" alt="masquer les filtres" /> masquer
         les filtres</button>
-    </fieldset>
+
+      <label for="selection_filtre"></label>
+      <select id="selection_filtre" name="selection_filtre" multiple">
+        <option value="-1" class="choix_filtres">choisir un filtre</option>
+        <option value="sports" class="choix_filtres">Sports</option>
+        <option value="prix" class="choix_filtres">Prix</option>
+        <option value="couleur" class="choix_filtres">Couleur</option>
+      </select>
+    </form>
     <div class="big_container">
       <form class="filtre__container" id="filter-form">
         <details open>
@@ -376,9 +384,9 @@
     <div class="container-navigateur">
       <button type="button" class="navigateur__page" aria-label="Page précédente" id="pagePrecedente">
         &lt; </button>
-      <button type="button" class="navigateur__page" aria-label="Page 1" id="page1">1</button>
-      <button type="button" class="navigateur__page" aria-label="Page 2" id="page2">2</button>
-      <button type="button" class="navigateur__page" aria-label="Page 3" id="page3">3</button>
+      <button type="button" class="navigateur__page is-active" aria-label="Page 1" id="page1">1</button>
+      <button type="button" class="navigateur__page is-active" aria-label="Page 2" id="page2">2</button>
+      <button type="button" class="navigateur__page is-active" aria-label="Page 3" id="page3">3</button>
       <button type="button" class="navigateur__page" aria-label="Page suivante" id="pageSuivante">&gt;</button>
     </div>
   </main>

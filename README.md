@@ -6,14 +6,17 @@ Ceci est ma solution pour le TP1. Ce défi m'a permis de concevoir un ou plusieu
 
 ## Sommaire
 
-- [Présentation](#présentation)
-  - [Le défi : des composants accessibles](#le-défi)
-  - [Liens](#liens)
-- [Mon processus](#mon-processus)
-  - [Technologies utilisées](#technologies-utilisées)
-  - [Ce que j'ai appris](#ce-ce-que-jai-appris)
-  - [Développement continu](#développement-continu)
-- [Auteur](#auteur)
+- [TP1 - (2026)](#tp1---2026)
+  - [Sommaire](#sommaire)
+  - [Présentation](#présentation)
+    - [Le défi : des composants accessibles](#le-défi--des-composants-accessibles)
+    - [Liens](#liens)
+  - [Mon Processus](#mon-processus)
+    - [Technologies utilisées](#technologies-utilisées)
+    - [Ce que j'ai appris](#ce-que-jai-appris)
+    - [Développement continu](#développement-continu)
+  - [Auteur](#auteur)
+      - [Émile Germain](#émile-germain)
 
 ## Présentation
 
@@ -41,9 +44,10 @@ Les utilisateurs doivent être capables de :
 - **JavaScript Vanille** – Script épuré (syntaxe `let` et fonctions classiques pour débutant) axé sur l'accessibilité ARIA.
 
 ### Ce que j'ai appris
-
+- **html** ne jamais utiliser le javascript natif du html pour éviter les confusion. (DÉSUET)
 ### Développement continu
 
 Pour mes prochains projets, je souhaite approfondir :
-
+'javascript' -- rajouter de l'interactivité encore plus 
 ## Auteur
+#### Émile Germain
