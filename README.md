@@ -31,7 +31,7 @@ Les utilisateurs doivent être capables de :
 
 ### Liens
 
-- URL de la solution : [Lien vers mon dépôt GitHub](https://github.com)
+- URL de la solution : [Lien vers mon dépôt GitHub](https://github.com/EG-1000/Gr1_GermainE-RPNITP1)
 - URL du site en direct : [Lien vers GitHub Pages](https://github.io)
 
 ## Mon Processus
