@@ -2,7 +2,7 @@
 
 @layer components {
   /* 1. ARCHITECTURE DESKTOP */
-  .nav-menu {
+  .nav-menu, .niv-manu {
     --nav-bg: #000000;
     --nav-text: #fff;
     --nav-accent: #e7e3e7;
@@ -12,17 +12,19 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--nav-bg);
-    padding: 1rem 2rem;
+   
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 
-    .nav-menu__list {
+    .nav-menu__list, .nav-minu__lest {
       display: flex;
       gap: 2rem;
       list-style: none;
       margin: 0;
-      padding: 0;
+      padding: 0;  
+      z-index:100;
+ 
     }
-    .nav-menu__item:first-child {
+    .nav-minu__etem {
       /* company name */
       font-family: "Barlow Condensed";
       font-size: 22px;
@@ -36,9 +38,10 @@
       font-family: Barlow;
       font-size: 12px;
       font-style: normal;
-      font-weight: 500;
+
       line-height: normal;
       letter-spacing: 0.84px;
+   
     }
     .nav-menu__link {
       color: var(--nav-text);

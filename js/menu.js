@@ -2,7 +2,7 @@
 
 let boutonToggle = document.querySelector(".nav-menu__toggle");
 let listeMenu = document.querySelector(".nav-menu__list");
-
+let listeMinu = document.querySelector(".nav-minu__lest")
 if (boutonToggle && listeMenu) {
   // On cible le texte à l'intérieur du bouton
   let libelleTexte = boutonToggle.querySelector(".nav-menu__libelle");
